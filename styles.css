@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+html, body {
+  margin: 0;
+  height:100%;
+  width:100%;
+  padding:0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 20px 10%;
+    background: #031540;
+    background-color: #031540;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #00abf0;
+}
+
+.home {
+    height: 100vh;
+    background: linear-gradient(-90deg, #031540 65%, #fff 35%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    padding-top: 100px;
+}
+
+.Home-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    background: #031540;
+    border-radius: 50%;
+    border: 25px solid #fff;
+}
+
+.home-content {
+    max-width: 600px;
+    color: #fff;
+    bottom: 22px;
+    text-align: right;
+}
+
+.home-image img {
+    position: relative;
+    max-width: 380px;
+}
+
+.home-content h1 {
+    font-size: 55px;
+    line-height: 1.2;
+}
+
+.home-content h2 {
+    font-size: 40px;
+    color: transparent;
+    -webkit-text-stroke: 0.5px #fff;
+    background-repeat: no-repeat;
+}
+
+.home-content p {
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.home-sci {
+    margin: 25px 0 40px;
+}
+
+.home-sci a {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    align-items: center;
+    margin-left: 12px;
+    justify-content: center;
+}
+
+.home-sci a:hover {
+    background: #00abf0;
+    color: #fff;
+    box-shadow: 0 0 10px #00abf0;
+}
+
+.btn {
+    padding: 12px 35px;
+    background: #00abf0;
+    border-radius: 40px;
+    font-size: 17px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px #00abf0;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+#aboutme{
+  display: block;
+  background-color: #031540;
+  height:100%;
+  width:100%;
+  padding: 60px;
+  padding-left: 120px;
+  box-sizing:border-box;
+  font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    .card {
+        background-color: rgba(255, 255, 255, 0.3); /* White with 30% opacity */
+        border: none; /* Removes border to keep it sleek */
+        color: #fff; /* Ensures the text is readable on the transparent background */
+    }
+    
+    .card-body {
+        backdrop-filter: blur(10px); /* Optional: Adds a nice blur effect */
+    }
+    
+    .fullpage-section {
+        padding: 60px 0; /* Adds some spacing */
+        background-color: #222; /* Sets a dark background to contrast with the cards */
+    }
+    
+    h5.card-title {
+        color: #fff; /* Keeps the title text readable */
+    }
+    
+    p.card-text, a i {
+        color: #fff; /* Makes the content text and icons readable */
+    }
+    
+}
+
+
+#Skills-And-Certifications{
+    display: block;
+    background-image: url(Codez.png);
+    height:100%;
+    width:100%;
+    padding: 60px;
+    padding-left: 120px;
+    box-sizing:border-box;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    background-repeat: no-repeat;
+  }
+
+  #Mini-Projects{
+    display: block;
+    height:100%;
+    width:100%;
+    padding: 60px;
+    padding-left: 120px;
+    box-sizing:border-box;
+    font-size: 25px;
+    color: #031540;
+    text-decoration: none;
+    font-weight: 700;
+    background-repeat: no-repeat;
+  }
+
+  .card-body i {
+    margin-right: 15px; 
+    font-size: 24px; 
+}
+
+#Contact{
+    display: block;
+  background-color: #031540;
+  height:100%;
+  width:100%;
+  padding: 60px;
+  padding-left: 120px;
+  box-sizing:border-box;
+  font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700; 
+}
