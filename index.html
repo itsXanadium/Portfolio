@@ -9,6 +9,16 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
     <style>
+        #aboutme p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        #aboutme .about-text span.fw-bold {
+            font-size: 1.15rem;
+        }
+
         .fullpage-section {
             height: 100vh;
             display: flex;
@@ -77,6 +87,20 @@
         }
 
 
+        .divider {
+            width: 3px;
+            background: linear-gradient(180deg, #000000, #000000);
+            border-radius: 2px;
+            height: 100%;
+        }
+
+
+        /* Paragraph styling */
+        #aboutme p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
 
         .navbar a:hover {
             color: #007bff;
@@ -293,9 +317,9 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .navbar {
+            /* .navbar {
                 display: none;
-            }
+            } */
 
             .home h1 {
                 font-size: 2rem;
@@ -349,41 +373,50 @@
 
     <!-- About -->
     <section id="aboutme" class="fullpage-section">
-        <div class="container text-center">
-            <h2 class="mb-5">About Me</h2>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-4">
-                    <div class="card p-4">
-                        <h5 class="fw-bold">Who Am I</h5>
-                        <p>My name is I Putu Rajendra Pradiptayudha, from Lombok, NTB. I’m an Information System student
-                            at Universitas Pendidikan Ganesha.</p>
+        <div class="container">
+            <h2 class="text-center mb-5">About Me</h2>
+            <div class="row align-items-stretch">
+
+                <!-- Left Side -->
+                <div class="col-md-6 d-flex flex-column justify-content-center about-left">
+                    <p><span class="fw-bold text-primary">Who Am I:</span>
+                        My name is <strong>I Putu Rajendra Pradiptayudha</strong>, from Lombok, NTB.
+                        I’m an Information System student at Universitas Pendidikan Ganesha.
+                    </p>
+
+                    <p><span class="fw-bold text-primary">My Interests:</span>
+                        I have a strong passion for <strong>Web Development</strong> and <strong>Cybersecurity</strong>.
+                        I enjoy learning new frameworks and technologies that are shaping the future of web programming
+                        and security.
+                    </p>
+                </div>
+
+                <!-- Middle Divider -->
+                <div class="col-md-1 d-none d-md-flex justify-content-center">
+                    <div class="divider"></div>
+                </div>
+
+                <!-- Right Side -->
+                <div class="col-md-5 d-flex flex-column justify-content-center about-right mt-4 mt-md-0">
+                    <p><span class="fw-bold text-primary">My Skills:</span>
+                        I have hands-on experience with several languages and frameworks such as
+                        <strong>JavaScript, Python, React, PHP, Laravel, and Flask</strong>.
+                    </p>
+                    <div class="floating-icons d-flex justify-content-center gap-3 fs-1 mt-3">
+                        <a href="https://www.javascript.com"><i class='bx bxl-javascript'></i></a>
+                        <a href="https://react.dev/"><i class='bx bxl-react'></i></a>
+                        <a href="https://www.php.net"><i class='bx bxl-php'></i></a>
+                        <a href="https://www.python.org"><i class='bx bxl-python'></i></a>
+                        <a href="https://code.visualstudio.com"><i class='bx bxl-visual-studio'></i></a>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card p-4">
-                        <h5 class="fw-bold">My Interests</h5>
-                        <p>I have interest on web Development and Cybersecurity, i like to learn the newcoming framework
-                            and tech that are used in the Development on Web programming and Security.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card p-4">
-                        <h5 class="fw-bold">My Skills</h5>
-                        <p>I have skills and knowledge in Bunch of Language and Framework such as: </p>
-                        <p> JavaScript, Python, React, PHP, Laravel, Flask.</p>
-                        <div class="d-flex justify-content-center gap-3 fs-3">
-                            <a href="https://www.javascript.com"><i class='bx bxl-javascript'></i></a>
-                            <a href="https://react.dev/"><i class='bx bxl-react'></i></a>
-                            <a href="https://www.php.net"><i class='bx bxl-php'></i></a>
-                            <a href="https://www.python.org"><i class='bx bxl-python'></i></a>
-                            <a href="https://code.visualstudio.com"><i class='bx bxl-visual-studio'></i></a>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
+
+
+
 
     <!-- Projects -->
     <section id="mini-projects" class="fullpage-section ">
