@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
+/* Reset + Global */
 * {
     margin: 0;
     padding: 0;
@@ -7,13 +8,15 @@
     scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
 }
-html, body {
-  margin: 0;
-  height:100%;
-  width:100%;
-  padding:0;
+
+html,
+body {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
+/* Navbar/Header */
 .header {
     position: fixed;
     top: 0;
@@ -22,8 +25,6 @@ html, body {
     height: 60px;
     padding: 20px 10%;
     background: #031540;
-    background-color: #031540;
-    background-size: cover;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,17 +53,42 @@ html, body {
     color: #00abf0;
 }
 
-.home {
+/* Fullpage Section Base */
+.fullpage-section {
     height: 100vh;
-    background: linear-gradient(-90deg, #031540 65%, #fff 35%);
+    min-height: 600px;
+    /* fallback for small laptops */
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 10%;
-    padding-top: 100px;
+    scroll-snap-align: start;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    opacity: 0;
+    transform: translateY(40px);
+    padding: 20px;
+    text-align: center;
 }
 
-.Home-image {
+.fullpage-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Home */
+.home {
+    background: linear-gradient(-90deg, #031540 65%, #fff 35%);
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+section {
+    padding-top: 80px;
+    box-sizing: border-box;
+}
+
+.home-image {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,33 +99,27 @@ html, body {
     border: 25px solid #fff;
 }
 
+.home-image img {
+    max-width: 380px;
+}
+
 .home-content {
     max-width: 600px;
     color: #fff;
-    bottom: 22px;
     text-align: right;
-}
-
-.home-image img {
-    position: relative;
-    max-width: 380px;
 }
 
 .home-content h1 {
     font-size: 55px;
     line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .home-content h2 {
     font-size: 40px;
     color: transparent;
     -webkit-text-stroke: 0.5px #fff;
-    background-repeat: no-repeat;
-}
-
-.home-content p {
-    font-size: 15px;
-    margin-top: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .home-sci {
@@ -110,15 +130,15 @@ html, body {
     display: inline-flex;
     width: 40px;
     height: 40px;
-    background: transparent;
     border: 2px solid #fff;
     border-radius: 50%;
     font-size: 20px;
     color: #00abf0;
     text-decoration: none;
     align-items: center;
-    margin-left: 12px;
     justify-content: center;
+    margin-left: 12px;
+    transition: 0.3s;
 }
 
 .home-sci a:hover {
@@ -136,94 +156,81 @@ html, body {
     font-weight: 600;
     letter-spacing: 1px;
     box-shadow: 0 0 10px #00abf0;
+    transition: 0.3s;
 }
 
 .btn:hover {
     box-shadow: none;
 }
 
-#aboutme{
-  display: block;
-  background-color: #031540;
-  height:100%;
-  width:100%;
-  padding: 60px;
-  padding-left: 120px;
-  box-sizing:border-box;
-  font-size: 25px;
+/* About */
+#aboutme {
+    background-color: #031540;
     color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    .card {
-        background-color: rgba(255, 255, 255, 0.3); /* White with 30% opacity */
-        border: none; /* Removes border to keep it sleek */
-        color: #fff; /* Ensures the text is readable on the transparent background */
-    }
-    
-    .card-body {
-        backdrop-filter: blur(10px); /* Optional: Adds a nice blur effect */
-    }
-    
-    .fullpage-section {
-        padding: 60px 0; /* Adds some spacing */
-        background-color: #222; /* Sets a dark background to contrast with the cards */
-    }
-    
-    h5.card-title {
-        color: #fff; /* Keeps the title text readable */
-    }
-    
-    p.card-text, a i {
-        color: #fff; /* Makes the content text and icons readable */
-    }
-    
 }
 
-
-#Skills-And-Certifications{
-    display: block;
-    background-image: url(Codez.png);
-    height:100%;
-    width:100%;
-    padding: 60px;
-    padding-left: 120px;
-    box-sizing:border-box;
-    font-size: 25px;
+#aboutme .card {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
     color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    background-repeat: no-repeat;
-  }
+}
 
-  #Mini-Projects{
-    display: block;
-    height:100%;
-    width:100%;
-    padding: 60px;
-    padding-left: 120px;
-    box-sizing:border-box;
-    font-size: 25px;
+#aboutme .card-body {
+    backdrop-filter: blur(10px);
+}
+
+#aboutme h5.card-title,
+#aboutme p.card-text,
+#aboutme a i {
+    color: #fff;
+}
+
+/* Skills */
+#skills-certifications {
+    background: url("Codez.png") no-repeat center/cover;
+    color: #fff;
+}
+
+/* Mini Projects */
+#mini-projects {
+    background: #f9f9f9;
     color: #031540;
-    text-decoration: none;
-    font-weight: 700;
-    background-repeat: no-repeat;
-  }
-
-  .card-body i {
-    margin-right: 15px; 
-    font-size: 24px; 
 }
 
-#Contact{
-    display: block;
-  background-color: #031540;
-  height:100%;
-  width:100%;
-  padding: 60px;
-  padding-left: 120px;
-  box-sizing:border-box;
-  font-size: 25px;
+/* Contact */
+#contact {
+    background-color: #031540;
     color: #fff;
-    text-decoration: none;
-    font-weight: 700; 
+}
+
+.card-body i {
+    margin-right: 15px;
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    .fullpage-section {
+        height: auto;
+        /* don’t force full screen on mobile */
+        min-height: 100vh;
+        /* still cover screen if content is small */
+        justify-content: flex-start;
+        padding-top: 100px;
+        /* extra spacing for navbar */
+        padding-bottom: 60px;
+        scroll-snap-align: none;
+        /* smoother scrolling on touch */
+    }
+
+    html,
+    body {
+        scroll-snap-type: none;
+        /* turn off snap on mobile */
+    }
+
+    nav ul {
+        flex-direction: column;
+        /* stack menu items */
+        gap: 10px;
+    }
 }
