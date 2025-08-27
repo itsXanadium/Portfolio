@@ -31,6 +31,7 @@
             overflow-y: scroll;
             scroll-behavior: smooth;
             background: #ffffff;
+
         }
 
         /* Navbar */
@@ -39,29 +40,43 @@
             top: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.9);
+            background: #111827;
+            /* background: #838282; */
             backdrop-filter: blur(10px);
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 1rem 2rem;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            color: #ffffff;
         }
 
         .header .logo {
             font-weight: bold;
             font-size: 1.25rem;
             text-decoration: none;
-            color: #000;
+            color: #ffffff;
+        }
+
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        header a:hover {
+            color: #d1d5db;
+
         }
 
         .navbar a {
             margin-left: 1.5rem;
             text-decoration: none;
-            color: #333;
+            color: #ffffff;
             font-weight: 500;
             transition: color 0.3s ease;
         }
+
+
 
         .navbar a:hover {
             color: #007bff;
@@ -108,16 +123,38 @@
             color: #007bff;
         }
 
-        /* Cards */
+        .section-gradient {
+            background: linear-gradient(180deg, #283348 0%, #1f2937 100%);
+            color: #f9fafb;
+            /* almost white text */
+            padding: 4rem 2rem;
+        }
+
         .card {
+            background-color: #0c1117;
+            /* Tailwind's gray-800 */
+            color: #f3f4f6;
+            /* light gray text */
+            border: none;
             border-radius: 1rem;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 12px 28px rgba(128, 127, 127, 0.25);
+        }
+
+        /* Card titles in brighter white */
+        .card-title {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* Card text a little lighter */
+        .card-text {
+            color: #d1d5db;
         }
 
         /* Contact */
@@ -126,6 +163,133 @@
             border-radius: 0.5rem;
             font-weight: 500;
         }
+
+        /* Home / Hero Section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            padding: 0 1rem;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: url('view.png') no-repeat center center/cover;
+            filter: blur(8px);
+            /* blur effect */
+            transform: scale(1.1);
+            /* avoid edges being visible after blur */
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            /* overlay for contrast */
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            /* above blur + overlay */
+        }
+
+
+        .hero img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .hero img:hover {
+            transform: scale(1.05);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: bold;
+            margin-top: 1rem;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h2 {
+            font-size: 1.3rem;
+            color: #d1d5db;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero .btn {
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+            padding: 0.6rem 1.4rem;
+            font-weight: 500;
+            color: #ffffff;
+            border-color: #d1d5db;
+        }
+
+        .hero .btn:hover {
+            background: #374151;
+            color: #ffffff;
+        }
+
+        /* Social icons */
+        .home-sci a {
+            font-size: 2rem;
+            margin: 0 0.5rem;
+            color: #e5e7eb;
+            transition: color 0.3s;
+        }
+
+        .home-sci a:hover {
+            color: #60a5fa;
+            /* blue-400 */
+        }
+
+        .project-section {
+            background: url("acodebackgrouhd.jpeg") no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+            /* optional, gives parallax feel */
+            position: relative;
+            color: white;
+            /* makes text readable */
+        }
+
+        /* Add a blur overlay */
+        .project-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(6px);
+            background: rgba(0, 0, 0, 0.5);
+            /* dark overlay */
+            z-index: 1;
+        }
+
+        /* make sure content stays above overlay */
+        .project-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
 
         /* Responsive */
         @media (max-width: 768px) {
@@ -152,7 +316,7 @@
     <!-- Navbar -->
     <header class="header" id="header">
         <a href="#" class="logo">Pradiptayudha</a>
-        <nav class="navbar">
+        <nav class="navbar navbar-expand-lg ">
             <a href="#aboutme">About Me</a>
             <a href="#mini-projects">My Projects</a>
             <a href="#contact">Contact</a>
@@ -160,26 +324,30 @@
     </header>
 
     <!-- Home -->
-    <section class="home fullpage-section">
-        <a href="https://github.com/admex1">
-            <img src="myface.png" alt="Profile Picture">
-        </a>
-        <h1>Pradiptayudha</h1>
-        <h2>Web Development & Cybersecurity Enthusiast</h2>
-        <a href="CV.pdf" target="_blank" class="btn btn-outline-secondary    mt-3">
-            View CV
-        </a>
-        <div class="home-sci">
-            <a href="https://github.com/ADmex1"><i class='bx bxl-github'></i></a>
-            <a href="https://www.linkedin.com/in/rajendra-pradiptayudha-83b9632b0/"><i
-                    class='bx bxl-linkedin-square'></i></a>
-            <a href="https://www.instagram.com/yudha_newb/"><i class='bx bxl-instagram'></i></a>
-            <a href="#"><i class='bx bxl-discord'></i></a>
+    <section class="home fullpage-section hero">
+        <div class="hero-content">
+            <a href="https://github.com/admex1">
+                <img src="myface.png" alt="Profile Picture">
+            </a>
+            <h1>Pradiptayudha</h1>
+            <h2>Web Development & Cybersecurity Enthusiast</h2>
+            <a href="CV.pdf" target="_blank" class="btn btn-outline-secondary    mt-3">
+                View CV
+            </a>
+            <div class="home-sci">
+                <a href="https://github.com/ADmex1"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/rajendra-pradiptayudha-83b9632b0/"><i
+                        class='bx bxl-linkedin-square'></i></a>
+                <a href="https://www.instagram.com/yudha_newb/"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-discord'></i></a>
+            </div>
         </div>
+
+
     </section>
 
     <!-- About -->
-    <section id="aboutme" class="fullpage-section">
+    <section id="aboutme" class="fullpage-section section-gradient">
         <div class="container text-center">
             <h2 class="mb-5">About Me</h2>
             <div class="row g-4 justify-content-center">
@@ -217,60 +385,59 @@
     </section>
 
     <!-- Projects -->
-    <section id="mini-projects" class="fullpage-section">
-        <div class="container text-center">
-            <h2 class="mb-5">My Projects</h2>
-            <div class="row justify-content-center">
+    <section id="mini-projects" class="fullpage-section project-section"">
+        <div class=" container text-center">
+        <h2 class="mb-5">My Projects</h2>
+        <div class="row justify-content-center">
 
-                <!-- Project 1 -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="lovina.png" class="card-img-top" alt="BoatWeb Project">
-                        <div class="card-body">
-                            <h5 class="card-title">A Boat Rental Spot Display Web</h5>
-                            <p class="card-text">A Website for Boat Rental around Lovina Beach.</p>
-                            <a href="https://github.com/ADmex1/Boat-web-Project.git"
-                                class="btn btn-outline-secondary">Check
-                                Project</a>
-                        </div>
+            <!-- Project 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="lovina.png" class="card-img-top" alt="BoatWeb Project">
+                    <div class="card-body">
+                        <h5 class="card-title">A Boat Rental Spot Display Web</h5>
+                        <p class="card-text">A Website for Boat Rental around Lovina Beach.</p>
+                        <a href="https://github.com/ADmex1/Boat-web-Project.git" class="btn btn-outline-secondary">Check
+                            Project</a>
                     </div>
                 </div>
-
-                <!-- Project 2 -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="NorthBali.png" class="card-img-top" alt="NorthBaliweb Project">
-                        <div class="card-body">
-                            <h5 class="card-title">Northern Bali Tourism Spot Website</h5>
-                            <p class="card-text">a website that focused on showcasing Destination spot around Northern
-                                Bali.</p>
-                            <a href="https://github.com/ADmex1/NorthBaliWeb.git" class="btn btn-outline-secondary">Check
-                                Project</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="CommunityHubs.png" class="card-img-top" alt="CommunityHub website Project">
-                        <div class="card-body">
-                            <h5 class="card-title">CommunityHub</h5>
-                            <p class="card-text">A Passion website that focused on Sharing user blogs, books, and
-                                projects.</p>
-                            <a href="https://github.com/ADmex1/LearnHub.git" class="btn btn-outline-secondary">Check
-                                Project</a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+
+            <!-- Project 2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="NorthBali.png" class="card-img-top" alt="NorthBaliweb Project">
+                    <div class="card-body">
+                        <h5 class="card-title">Northern Bali Tourism Spot Website</h5>
+                        <p class="card-text">a website that focused on showcasing Destination spot around Northern
+                            Bali.</p>
+                        <a href="https://github.com/ADmex1/NorthBaliWeb.git" class="btn btn-outline-secondary">Check
+                            Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="CommunityHubs.png" class="card-img-top" alt="CommunityHub website Project">
+                    <div class="card-body">
+                        <h5 class="card-title">CommunityHub</h5>
+                        <p class="card-text">A Passion website that focused on Sharing user blogs, books, and
+                            projects.</p>
+                        <a href="https://github.com/ADmex1/LearnHub.git" class="btn btn-outline-secondary">Check
+                            Project</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
         </div>
     </section>
 
 
     <!-- Contact -->
-    <section id="contact" class="fullpage-section">
+    <section id="contact" class="fullpage-section section-gradient">
         <div class="container text-center">
             <h2 class="mb-4">Contact Me!</h2>
             <div class="row justify-content-center">
@@ -279,7 +446,7 @@
                         <input type="text" class="form-control mb-3" placeholder="Full Name">
                         <input type="email" class="form-control mb-3" placeholder="Email">
                         <textarea class="form-control mb-3" rows="4" placeholder="Message"></textarea>
-                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                        <button type="submit" class="btn btn-outline-secondary w-100">Send Message</button>
                     </form>
                 </div>
             </div>
