@@ -1,224 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Xanadium portfolio showcasing web development projects using php, Laravel, Go, and Python.">
-    <meta name="keywords" content="Xanadium, Portfolio, Go, Backend Engineering, php, Laravel">
-    <title>My Profile</title>
+    <title>Pradiptayudha</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <header class="header" id="header">
-        <a href="#" class="logo"></a>
-        <nav class="navbar navbar-expand-lg">
-            <a href="#home">Home</a>
-            <a href="#aboutme">About Me</a>
-            <a href="#mini-projects">Projects</a>
-            <!-- <a href="#contact">Contact</a> -->
-        </nav>
-    </header>
+<!-- MINI NAVBAR -->
+<nav class="mini-nav">
+    <button data-page="home" class="active">Home</button>
+    <button data-page="aboutme">About</button>
+    <button data-page="mini-projects">Projects</button>
+</nav>
 
-    <!-- Home Section -->
-    <section id="home" class="home-section fullpage-section">
+<!-- HOME -->
+<section id="home" class="fullpage-section active">
+    <div class="section-inner">
         <div class="home-container">
             <div class="home-text">
                 <h1>Pradiptayudha</h1>
-                <p>I write code for Backend system.</p>
-                <!-- <p>Guten Tag!</p> -->
+                <p>I write backend codes.</p>
+
                 <div class="home-buttons">
-                    <!-- <a href="https://github.com/ADmex1" aria-label="GitHub"><i class='bx bxl-github'></i></a> -->
-                    <a href="https://www.linkedin.com/in/rajendra-pradiptayudha-83b9632b0/" aria-label="LinkedIn"><i
-                            class='bx bxl-linkedin-square'></i></a>
-                    <a href="https://www.instagram.com/yudha_newb/" aria-label="Instagram"><i
-                            class='bx bxl-instagram'></i></a>
-                    <a href="#" aria-label="Discord"><i class='bx bxl-discord'></i></a>
+                    <a href="https://www.linkedin.com/in/rajendra-pradiptayudha-83b9632b0/" aria-label="LinkedIn"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href="https://www.instagram.com/yudha_newb/" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
                 </div>
-                <a href="https://github.com/itsXanadium" class="btn btn-github">
-                    <i class='bx bxl-github'></i> View Github
+
+                <a href="https://github.com/itsXanadium" class="btn-github">
+                    <i class='bx bxl-github'></i> View GitHub
                 </a>
             </div>
+
             <div class="home-image">
-                <a href="https://github.com/itsXanadium">
-                    <img src="necoarc.png" alt="Profile Picture" loading="lazy">
-                </a>
+                <img src="necoarc.png" alt="Pradiptayudha Profile">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- About Section -->
-    <section id="aboutme" class="fullpage-section">
+<!-- ABOUT -->
+<section id="aboutme" class="fullpage-section">
+    <div class="section-inner">
         <div class="container">
             <h2 class="text-center mb-5">About Me</h2>
-            <div class="row align-items-stretch">
-                <div class="col-md-6 d-flex flex-column justify-content-center about-left">
-                    <p><span class="fw-bold text-secondary">About me:</span> Im Pradiptayudha from Lombok, NTB. I’m an
-                        Information System student at Universitas Pendidikan
-                        Ganesha.</p>
-                    <p><span class="fw-bold text-secondary">More About me:</span> I usually write backend system for
-                        Websites/Apps/Software for projects/products, sometimes i also touch the frontend part, pretty
-                        much for API integration. I also like things that are related to
-                        Cybersecurity stuffs. </p>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p>
+                        My name is Pradiptayudha, and I am from Lombok. I am currently an Information Systems student at Universitas Pendidikan Ganesha.
+                    </p>
+                    <p>
+                        I started writing code for backend since late 2024, starting from using PHP Laravel. I mainly use Laravel and Golang as my primary tech stack.
+                    </p>
+                    <p>i have worked on several projects where i mainly handling on backend development.</p>
                 </div>
-
-                <div class="col-md-1 d-none d-md-flex justify-content-center">
-                    <div class="divider"></div>
-                </div>
-
-                <div class="col-md-5 d-flex flex-column justify-content-center about-right mt-4 mt-md-0">
-                    <p><span class="fw-bold text-secondary">My Skills:</span>
-                        i have use and work with several language and frameworks like</p>
-                    <p><strong> Python, PHP, Laravel, Flask, GO</strong></p>
-                    <div class="floating-icons d-flex justify-content-center gap-3 fs-1 mt-3">
-                        <a href="https://www.php.net/"><i class='bx bxl-php' style="color:#777bb4;"></i></a>
-                        <a href="https://www.python.org/"><i class='bx bxl-python' style="color:#3776ab;"></i></a>
-                        <a href="https://go.dev/"><i class='devicon-go-original-wordmark "'></i></a>
-                        <a href="https://docs.gofiber.io/"><i class="devicon-fiber-plain colored"></i>
-                        </a>
+                <div class="col-md-6">
+                    <p><strong>Tech Stack</strong></p>
+                    <!-- <p>Python, PHP, Laravel, Flask, Go</p> -->
+                    <div class="fs-1 d-flex gap-3">
+                        <i class='bx bxl-python'></i>
+                        <i class='bx bxl-php'></i>
+                        <i class="devicon-go-original-wordmark"></i>
+                        <i class="devicon-laravel-plain"></i>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- <section id="about" class="fullpage-section">
-        <h2 class="fu section-title">About Me</h2>
+    </div>
+</section>
 
-        <div class="code-showcase">
-            <div class="code-header">
-                <span class="code-dot"></span>
-                <span class="code-dot"></span>
-                <span class="code-dot"></span>
-                <span style="margin-left: 1rem; color: #8b949e; font-size: 0.85rem;">Aboutme_model.go</span>
-            </div>
-            <div class="code-content">
-                <div class="code-line"><span class="keyword">package</span> model</div>
-                <div class="code-line">&nbsp;</div>
-                <div class="code-line"><span class="keyword">type</span> Aboutme <span class="keyword">struct</span> {
-                </div>
-                <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                        class="keyword">string</span> <span class="comment">// "I Putu Rajendra Pradiptayudha"</span>
-                </div>
-                <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;Location&nbsp;&nbsp;<span class="keyword">string</span>
-                    <span class="comment">// "Lombok, NTB → Bali"</span>
-                </div>
-                <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;Role&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                        class="keyword">string</span> <span class="comment">// "Backend Engineer"</span></div>
-                <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;Focus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[]<span
-                        class="keyword">string</span> <span class="comment">// ["API Design", "Security",
-                        "Performance"]</span></div>
-                <div class="code-line">}</div>
-                <div class="code-line">&nbsp;</div>
-                <div class="code-line"><span class="comment">// Currently studying Information Systems at Universitas
-                        Pendidikan Ganesha</span></div>
-                <div class="code-line"><span class="comment">// Passionate on Building efficient and secure backend
-                        system.</span></div>
-                <div class="code-line"><span class="comment">// Interested in malware analysis and web security
-                        research</span></div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Projects Section -->
-    <section id="mini-projects" class="fullpage-section">
+<!-- PROJECTS -->
+<section id="mini-projects" class="fullpage-section">
+    <div class="section-inner">
         <div class="container text-center">
-            <h2 class="mb-5">My Projects</h2>
-            <p class="mb-4">These are the projects i worked on as either Passion project, or
-                Group project</p>
+            <h2 class="mb-4">My Projects</h2>
+
             <div class="row justify-content-center">
-                <div class="col-md-4 d-flex">
+                <div class="col-md-4 mb-4">
                     <div class="card h-100">
-                        <img src="lovina.png" class="card-img-top" alt="BoatWeb Project">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Boat Rental Spot Web</h5>
-                            <p class="card-text">Website for Boat Rental around Lovina Beach.
-                            </p>
-                            <p><strong>Tech that are used: </strong>React(Frontend), PHP Lumens
-                                (Backend), MySQL(DB).
-                            </p>
-                            <a href="https://github.com/itsXanadium/Boat-web-Project.git"
+                        <img src="lovina.png" class="card-img-top" alt="Boat Rental Website">
+                        <div class="card-body">
+                            <h5>Boat Rental Web</h5>
+                            <p>Boat rental website around lovina</p>
+                            <p>Tech Stack: Laravel · MySQL</p>
+                            <a href="https://github.com/itsXanadium/Boat-web-Project"
                                 class="btn btn-outline-secondary mt-auto"> <i class='bx bxl-github'></i> Check
                                 Project</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4 d-flex">
+                <div class="col-md-4 mb-4">
                     <div class="card h-100">
-                        <img src="NorthBali.png" class="card-img-top" alt="NorthBali Project">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Northern Bali Tourism Web</h5>
-                            <p class="card-text">Showcasing destination spots around Northern
-                                Bali.</p>
-                            <p><strong>Stack that are used: </strong> React(Frontend), Python
-                                Flask(Backend),
-                                Mysql(DB).</p>
-
+                        <img src="kclean.jpg" class="card-img-top" alt="K-Clean Project">
+                        <div class="card-body">
+                            <h5>K-Clean Project</h5>
+                            <p>an Innovillage Project.</p>
+                            <p>Tech Stack: Laravel Sanctum · MySQL</p>
+                           <a href="https://github.com/itsXanadium/KClean"
+                                class="btn btn-outline-secondary mt-auto"> <i class='bx bxl-github'></i> Check
+                                Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="Apkoi.png" class="card-img-top" alt="APKOI Website">
+                        <div class="card-body">
+                            <h5>RESTFUL API of APKOI Website</h5>
+                            <p>Asosiasi Pendidikan Kepelatihan Olahraga Website</p>
+                            <p>Tech Stack: GO Fiber · Postgres</p>
                             <a href="https://github.com/itsXanadium/NorthBaliWeb.git"
                                 class="btn btn-outline-secondary mt-auto"> <i class='bx bxl-github'></i> Check
                                 Project</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-4 d-flex">
+                <div class="col-md-4 mb-4">
                     <div class="card h-100">
-                        <img src="CommunityHubs.png" class="card-img-top" alt="CommunityHub Project">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">CommunityHub</h5>
-                            <p class="card-text">Sharing user blogs, books, and projects.</p>
-                            <p><strong>Stack that are used: </strong> Full Stack Laravel.</p>
-                            <a href="https://github.com/itsXanadium/LearnHub.git"
-                                class="btn btn-outline-secondary mt-auto">
-                                <i class='bx bxl-github'></i> Check Project</a>
+                        <img src="NorthBali.png" class="card-img-top" alt="Northern Bali Tourism">
+                        <div class="card-body">
+                            <h5>Northern Bali Tourism website</h5>
+                            <p>A website displaying sports around Northern Bali.</p>
+                            <p>Tech Stack: Python Flask · MySQL</p>
+                            <a href="https://github.com/itsXanadium/NorthBaliWeb.git"
+                                class="btn btn-outline-secondary mt-auto"> <i class='bx bxl-github'></i> Check
+                                Project</a>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="goproject.png" class="card-img-top" alt="Northern Bali Tourism">
+                        <div class="card-body">
+                            <h5>Project Management Restful API</h5>
+                            <p>Restful API for Project Management.</p>
+                            <p>Tech Stack: GO Fiber · Postgres</p>
+                            <a href="https://github.com/itsXanadium/RESTFUL-API-GO-APKOI"
+                                class="btn btn-outline-secondary mt-auto"> <i class='bx bxl-github'></i> Check
+                                Project</a>
+                        </div>
+                    </div>
+            </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="CommunityHubs.png" class="card-img-top" alt="Northern Bali Tourism">
+                        <div class="card-body">
+                            <h5>Community Hubs</h5>
+                            <p>A Blog website.</p>
+                            <p>Tech Stack: Laravel · MySQL</p>
+                            <a href="https://github.com/itsXanadium/learnhub"
+                                class="btn btn-outline-secondary mt-auto"> <i class='bx bxl-github'></i> Check
+                                Project</a>
+                        </div>
+                    </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <!-- <section id="contact" class="fullpage-section">
-        <div class="container text-center">
-            <h2 class="mb-4">Contact Me!</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <form>
-                        <input type="text" class="form-control mb-3" placeholder="Full Name" required>
-                        <input type="email" class="form-control mb-3" placeholder="Email" required>
-                        <textarea class="form-control mb-3" rows="4" placeholder="Message" required></textarea>
-                        <button type="submit" class="btn btn-outline-secondary w-100">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section> -->
+<script>
+    // Navigation functionality
+    const navButtons = document.querySelectorAll('.mini-nav button');
+    const sections = document.querySelectorAll('.fullpage-section');
+    const miniNav = document.querySelector('.mini-nav');
 
-    <script>
-        // IntersectionObserver for scroll animations
-        document.addEventListener("DOMContentLoaded", () => {
-            const sections = document.querySelectorAll(".fullpage-section");
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("visible");
-                    }
-                });
-            }, { threshold: 0.3 });
-
-            sections.forEach(section => observer.observe(section));
+    navButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetPage = button.dataset.page;
+            
+            // Update active button
+            navButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            // Update active section
+            sections.forEach(section => {
+                if (section.id === targetPage) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
         });
-    </script>
-</body>
+    });
 
-</html>
+    // Hide/show navbar on scroll
+    let lastScrollTop = 0;
+    const sectionInners = document.querySelectorAll('.section-inner');
+
+    sectionInners.forEach(sectionInner => {
+        sectionInner.addEventListener('scroll', () => {
+            const scrollTop = sectionInner.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 50) {
+                // Scrolling down
+                miniNav.classList.add('hidden');
+            } else {
+                // Scrolling up
+                miniNav.classList.remove('hidden');
+            }
+            
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    });
+</script>
+</body>
+</html> 
